@@ -10,7 +10,27 @@ public class ex01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		Scanner scn=new Scanner(System.in);
+		int[] data=new int[10];
+		for (int i=0;i<10;i++) {
+			data[i] = (int) (scn.next().charAt(0))-48;
+			if (data[i]==40||data[i]==72) {
+				data[i]=10;
+			}
+		}
+		for (int i=1;i<10;i++) {
+			data[i]=data[i-1]+data[i];
+		}
+
+		for (int i=1;i<10;i++) {
+			data[i]=data[i-1]+data[i];
+		}
+
+		if (data[9]%11==0) {
+			System.out.println("Right");
+		} else {
+			System.out.println("Wrong");
+		}
 
 	}
 
